@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plastic-Free Products - EarthArmor Packaging</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --primary: #2e7d32;
+        --secondary: #4caf50;
+        --accent: #8bc34a;
+        --light: #f1f8e9;
+        --dark: #1b5e20;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+
+      .navbar {
+        background-color: var(--primary);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+        color: white !important;
+      }
+
+      .nav-link {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+
+      .nav-link:hover {
+        color: white !important;
+      }
+
+      .hero-section {
+        background: linear-gradient(
+            rgba(46, 125, 50, 0.85),
+            rgba(46, 125, 50, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+
+      .btn-outline-primary {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .btn-outline-primary:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .product-card {
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        height: 100%;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        height: 200px;
+        object-fit: cover;
+        background: #f5f5f5;
+      }
+
+      .spec-badge {
+        background: var(--light);
+        color: var(--dark);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        margin: 2px;
+        display: inline-block;
+      }
+
+      .filter-sidebar {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .filter-group {
+        margin-bottom: 20px;
+      }
+
+      .category-badge {
+        background: var(--primary);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+      }
+
+      .footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 40px 0;
+      }
+
+      .product-specs {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .supplier-tag {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-leaf me-2"></i>EarthArmor Packaging
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="knowledge-hub.html">Knowledge Hub</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-light ms-2" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown ms-2">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                href="#"
+                id="miniCartDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                <span id="navCartCount" class="badge bg-danger ms-1">0</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end p-3"
+                aria-labelledby="miniCartDropdown"
+                style="min-width: 300px"
+              >
+                <li id="miniCartPreview">
+                  <div class="text-muted small">Cart is empty</div>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li class="d-flex justify-content-between">
+                  <button class="btn btn-sm btn-secondary" id="viewCartBtn">
+                    View Cart</button
+                  ><button class="btn btn-sm btn-primary" id="miniCheckoutBtn">
+                    Checkout
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="display-5 fw-bold mb-3">Plastic-Free Packaging Products</h1>
+        <p class="lead">
+          Browse our curated selection of sustainable packaging solutions from verified European suppliers
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Filters Sidebar -->
+          <div class="col-lg-3 mb-4">
+            <div class="filter-sidebar sticky-top" style="top: 100px;">
+              <h5 class="mb-3">Filters</h5>
+
+              <div class="filter-group">
+                <h6>Category</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-glass" checked />
+                  <label class="form-check-label" for="cat-glass">Glass Containers</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-wood" checked />
+                  <label class="form-check-label" for="cat-wood">Wooden Cutlery</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-bamboo" checked />
+                  <label class="form-check-label" for="cat-bamboo">Bamboo Products</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-metal" checked />
+                  <label class="form-check-label" for="cat-metal">Metal Containers</label>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h6>Material</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="mat-glass" />
+                  <label class="form-check-label" for="mat-glass">Glass</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="mat-wood" />
+                  <label class="form-check-label" for="mat-wood">Wood</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="mat-bamboo" />
+                  <label class="form-check-label" for="mat-bamboo">Bamboo</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="mat-metal" />
+                  <label class="form-check-label" for="mat-metal">Aluminum/Steel</label>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h6>Volume/Size</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="vol-small" />
+                  <label class="form-check-label" for="vol-small">Small (0-250ml)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="vol-medium" />
+                  <label class="form-check-label" for="vol-medium">Medium (250-500ml)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="vol-large" />
+                  <label class="form-check-label" for="vol-large">Large (500ml+)</label>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h6>Origin</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="origin-de" />
+                  <label class="form-check-label" for="origin-de">Germany</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="origin-it" />
+                  <label class="form-check-label" for="origin-it">Italy</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="origin-fr" />
+                  <label class="form-check-label" for="origin-fr">France</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="origin-se" />
+                  <label class="form-check-label" for="origin-se">Sweden</label>
+                </div>
+              </div>
+
+              <button class="btn btn-outline-primary btn-sm w-100">Reset Filters</button>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h4 class="mb-0">All Products <span class="text-muted">(24)</span></h4>
+              <select class="form-select form-select-sm" style="width: auto;">
+                <option>Sort by: Recommended</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest First</option>
+              </select>
+            </div>
+
+            <div class="row g-4">
+              <!-- Product 1: Glass Jar -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Premium Glass Storage Jar.jpg"
+                    class="card-img-top product-image"
+                    alt="Glass Storage Jar"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Glass Containers</span>
+                    <h5 class="card-title mt-2 mb-1">Premium Glass Storage Jar</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Italian Glass Works
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      High-quality glass jar with airtight bamboo lid, perfect for food storage and preserves.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> IGW-GJ-500-001
+                      </div>
+                      <div class="mb-1">
+                        <strong>Volume:</strong> 500ml
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 10cm (H) × 8cm (Ø)
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> 100% Recycled Glass
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Milan, Italy
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 500 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-recycle me-1"></i>100% Recycled</span>
+                      <span class="spec-badge"><i class="fas fa-infinity me-1"></i>Recyclable</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$2.50</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="glass-jar-500" data-name="Premium Glass Storage Jar" data-price="2.50" data-image="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 2: Glass Bottle -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                    class="card-img-top product-image"
+                    alt="Glass Beverage Bottle"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Glass Containers</span>
+                    <h5 class="card-title mt-2 mb-1">Eco Glass Beverage Bottle</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Italian Glass Works
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Classic beverage bottle with swing-top closure, ideal for juices, kombucha, and cold brew.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> IGW-GB-750-002
+                      </div>
+                      <div class="mb-1">
+                        <strong>Volume:</strong> 750ml
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 28cm (H) × 7cm (Ø)
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> Soda-Lime Glass
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Milan, Italy
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 1000 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-certificate me-1"></i>Food Safe</span>
+                      <span class="spec-badge"><i class="fas fa-infinity me-1"></i>Recyclable</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$1.85</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="glass-bottle-750" data-name="Eco Glass Beverage Bottle" data-price="1.85" data-image="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 3: Wooden Cutlery Set -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Birch Wood Cutlery Set.jpeg"
+                    class="card-img-top product-image"
+                    alt="Wooden Cutlery"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Wooden Cutlery</span>
+                    <h5 class="card-title mt-2 mb-1">Birch Wood Cutlery Set</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Green Nordic Pack
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Premium birch wood cutlery set - fork, knife, spoon. FSC-certified and fully compostable.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> GNP-WC-SET-003
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 16cm length
+                      </div>
+                      <div class="mb-1">
+                        <strong>Weight:</strong> 3g per piece
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> FSC Birch Wood
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Stockholm, Sweden
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 5000 sets
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-leaf me-1"></i>Compostable</span>
+                      <span class="spec-badge"><i class="fas fa-tree me-1"></i>FSC Certified</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$0.45</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="wood-cutlery-set" data-name="Birch Wood Cutlery Set" data-price="0.45" data-image="products/Birch Wood Cutlery Set.jpeg">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 4: Bamboo Plates -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Bamboo Fiber Plates.jpg"
+                    class="card-img-top product-image"
+                    alt="Bamboo Plates"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Bamboo Products</span>
+                    <h5 class="card-title mt-2 mb-1">Bamboo Fiber Plates</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>French Bamboo Co
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Disposable bamboo fiber plates, sturdy and microwave-safe. Perfect for events and catering.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> FBC-BP-25-004
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 25cm (Ø)
+                      </div>
+                      <div class="mb-1">
+                        <strong>Weight:</strong> 15g per plate
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> Bamboo Fiber
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Lyon, France
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 2000 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-leaf me-1"></i>Biodegradable</span>
+                      <span class="spec-badge"><i class="fas fa-fire me-1"></i>Microwave Safe</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$0.35</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="bamboo-plates" data-name="Bamboo Fiber Plates" data-price="0.35" data-image="products/Bamboo Fiber Plates.jpg">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 5: Aluminum Container -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Recyclable Aluminum Container.png"
+                    class="card-img-top product-image"
+                    alt="Aluminum Container"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Metal Containers</span>
+                    <h5 class="card-title mt-2 mb-1">Recyclable Aluminum Container</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Polish Metal Pack
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Food-safe aluminum container with lid, perfect for meal prep and takeaway services.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> PMP-AC-650-005
+                      </div>
+                      <div class="mb-1">
+                        <strong>Volume:</strong> 650ml
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 18cm × 12cm × 4.5cm
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> 90% Recycled Aluminum
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Warsaw, Poland
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 3000 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-recycle me-1"></i>90% Recycled</span>
+                      <span class="spec-badge"><i class="fas fa-temperature-high me-1"></i>Oven Safe</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$0.65</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="aluminum-container" data-name="Recyclable Aluminum Container" data-price="0.65" data-image="products/Recyclable Aluminum Container.png">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 6: Glass Cosmetic Jar -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Amber Glass Cosmetic Jar.jpg"
+                    class="card-img-top product-image"
+                    alt="Glass Cosmetic Jar"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Glass Containers</span>
+                    <h5 class="card-title mt-2 mb-1">Amber Glass Cosmetic Jar</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Italian Glass Works
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      UV-protective amber glass jar with aluminum lid, ideal for creams, balms, and skincare products.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> IGW-CJ-100-006
+                      </div>
+                      <div class="mb-1">
+                        <strong>Volume:</strong> 100ml
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 6cm (H) × 6cm (Ø)
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> Amber Glass + Aluminum
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Milan, Italy
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 500 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-sun me-1"></i>UV Protected</span>
+                      <span class="spec-badge"><i class="fas fa-infinity me-1"></i>Recyclable</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$1.20</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="cosmetic-jar" data-name="Amber Glass Cosmetic Jar" data-price="1.20" data-image="products/Amber Glass Cosmetic Jar.jpg">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 7: Wooden Spoons -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Eco Wooden Spoons.jpg"
+                    class="card-img-top product-image"
+                    alt="Wooden Spoons"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Wooden Cutlery</span>
+                    <h5 class="card-title mt-2 mb-1">Eco Wooden Spoons</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Green Nordic Pack
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Disposable wooden spoons made from sustainably sourced birch. Perfect for ice cream and desserts.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> GNP-WS-14-007
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 14cm length
+                      </div>
+                      <div class="mb-1">
+                        <strong>Weight:</strong> 2g per spoon
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> FSC Birch Wood
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Stockholm, Sweden
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 10000 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-leaf me-1"></i>Compostable</span>
+                      <span class="spec-badge"><i class="fas fa-tree me-1"></i>FSC Certified</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$0.08</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="wooden-spoons" data-name="Eco Wooden Spoons" data-price="0.08" data-image="products/Eco Wooden Spoons.jpg">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 8: Bamboo Cutlery Set -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="products/Bamboo Travel Cutlery Kit.jpg"
+                    class="card-img-top product-image"
+                    alt="Bamboo Cutlery"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Bamboo Products</span>
+                    <h5 class="card-title mt-2 mb-1">Bamboo Travel Cutlery Kit</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>French Bamboo Co
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Reusable bamboo cutlery set with cotton pouch. Includes fork, knife, spoon, chopsticks, and straw.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> FBC-TK-SET-008
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 20cm (pouch)
+                      </div>
+                      <div class="mb-1">
+                        <strong>Weight:</strong> 85g per set
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> Bamboo + Organic Cotton
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Lyon, France
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 500 sets
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-redo me-1"></i>Reusable</span>
+                      <span class="spec-badge"><i class="fas fa-leaf me-1"></i>Biodegradable</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$8.50</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="bamboo-travel-kit" data-name="Bamboo Travel Cutlery Kit" data-price="8.50" data-image="products/Bamboo Travel Cutlery Kit.jpg">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 9: Glass Oil Bottle -->
+              <div class="col-md-6 col-xl-4">
+                <div class="card product-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                    class="card-img-top product-image"
+                    alt="Glass Oil Bottle"
+                  />
+                  <div class="card-body">
+                    <span class="category-badge mb-2">Glass Containers</span>
+                    <h5 class="card-title mt-2 mb-1">Premium Oil & Vinegar Bottle</h5>
+                    <p class="supplier-tag mb-2">
+                      <i class="fas fa-industry me-1"></i>Italian Glass Works
+                    </p>
+                    <p class="card-text small text-muted mb-3">
+                      Elegant glass bottle with pour spout, perfect for olive oil, vinegar, and liquid condiments.
+                    </p>
+
+                    <div class="product-specs mb-3">
+                      <div class="mb-1">
+                        <strong>SKU:</strong> IGW-OB-250-009
+                      </div>
+                      <div class="mb-1">
+                        <strong>Volume:</strong> 250ml
+                      </div>
+                      <div class="mb-1">
+                        <strong>Size:</strong> 20cm (H) × 5cm (Ø)
+                      </div>
+                      <div class="mb-1">
+                        <strong>Material:</strong> Clear Glass + Cork
+                      </div>
+                      <div class="mb-1">
+                        <strong>Origin:</strong> <i class="fas fa-flag me-1"></i>Milan, Italy
+                      </div>
+                      <div class="mb-1">
+                        <strong>MOQ:</strong> 800 units
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <span class="spec-badge"><i class="fas fa-certificate me-1"></i>Food Safe</span>
+                      <span class="spec-badge"><i class="fas fa-infinity me-1"></i>Recyclable</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="h5 mb-0 text-success">$3.20</span>
+                      <button class="btn btn-primary btn-sm add-to-cart-product" data-id="oil-bottle" data-name="Premium Oil & Vinegar Bottle" data-price="3.20" data-image="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Product pagination" class="mt-5">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5><i class="fas fa-leaf me-2"></i>EarthArmor Packaging</h5>
+            <p>
+              Connecting businesses with sustainable packaging solutions to
+              reduce plastic waste and build consumer trust.
+            </p>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="suppliers.html" class="text-white-50">Suppliers</a></li>
+              <li><a href="products.html" class="text-white-50">Products</a></li>
+              <li><a href="knowledge-hub.html" class="text-white-50">Knowledge Hub</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5>Resources</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white-50">Case Studies</a></li>
+              <li><a href="#" class="text-white-50">Compliance Guides</a></li>
+              <li><a href="#" class="text-white-50">Certification Tools</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-envelope me-2"></i>info@eartharmor.com</li>
+              <li><i class="fas fa-phone me-2"></i>(555) 123-4567</li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>123 Sustainability
+                Way, Green City, GC 12345
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2023 EarthArmor Packaging. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+            <a href="#" class="text-white-50">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Cart</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="cartItems" class="mb-2">
+          <!-- cart items rendered here with editable qty controls -->
+        </div>
+        <div class="mt-3">
+          <strong>Total: $<span id="cartTotal">0.00</span></strong>
+        </div>
+        <div class="mt-3 d-flex gap-2">
+          <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+          <button class="btn btn-secondary" id="clearCartBtn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: var(--primary); color: white;">
+            <h5 class="modal-title"><i class="fas fa-shopping-cart me-2"></i>Checkout</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="checkoutForm">
+              <div class="row">
+                <div class="col-md-7">
+                  <h6 class="mb-3 fw-bold"><i class="fas fa-truck me-2"></i>Shipping Information</h6>
+                  <div class="mb-3">
+                    <label for="checkoutName" class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" id="checkoutName" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkoutEmail" class="form-label">Email Address *</label>
+                    <input type="email" class="form-control" id="checkoutEmail" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkoutPhone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="checkoutPhone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkoutAddress" class="form-label">Street Address *</label>
+                    <input type="text" class="form-control" id="checkoutAddress" required>
+                    <div class="invalid-feedback">Please enter your address</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="checkoutCity" class="form-label">City *</label>
+                      <input type="text" class="form-control" id="checkoutCity" required>
+                      <div class="invalid-feedback">Please enter your city</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="checkoutZip" class="form-label">ZIP / Postal Code *</label>
+                      <input type="text" class="form-control" id="checkoutZip" required>
+                      <div class="invalid-feedback">Please enter your ZIP code</div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="checkoutCountry" class="form-label">Country *</label>
+                    <select class="form-select" id="checkoutCountry" required>
+                      <option value="">Select Country</option>
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="UK">United Kingdom</option>
+                      <option value="DE">Germany</option>
+                      <option value="FR">France</option>
+                      <option value="ES">Spain</option>
+                      <option value="IT">Italy</option>
+                      <option value="NL">Netherlands</option>
+                      <option value="AU">Australia</option>
+                      <option value="OTHER">Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select your country</div>
+                  </div>
+                  <hr class="my-4">
+                  <h6 class="mb-3 fw-bold"><i class="fas fa-credit-card me-2"></i>Payment Information</h6>
+                  <div class="mb-3">
+                    <label for="checkoutCard" class="form-label">Card Number *</label>
+                    <input type="text" class="form-control" id="checkoutCard" placeholder="1234 5678 9012 3456" maxlength="19">
+                    <div class="invalid-feedback">Please enter a valid card number</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="checkoutExpiry" class="form-label">Expiry Date *</label>
+                      <input type="text" class="form-control" id="checkoutExpiry" placeholder="MM/YY" maxlength="5">
+                      <div class="invalid-feedback">Please enter a valid expiry date (MM/YY)</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="checkoutCvv" class="form-label">CVV *</label>
+                      <input type="text" class="form-control" id="checkoutCvv" placeholder="123" maxlength="4">
+                      <div class="invalid-feedback">Please enter a valid CVV</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="card bg-light">
+                    <div class="card-body">
+                      <h6 class="card-title fw-bold mb-3"><i class="fas fa-receipt me-2"></i>Order Summary</h6>
+                      <div id="checkoutSummary" class="mb-3" style="max-height: 200px; overflow-y: auto;"></div>
+                      <hr>
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span id="checkoutSubtotal">$0.00</span>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Shipping</span>
+                        <span id="checkoutShipping">$0.00</span>
+                      </div>
+                      <div class="small text-muted mb-3">
+                        <i class="fas fa-info-circle me-1"></i>Free shipping on orders over $100
+                      </div>
+                      <hr>
+                      <div class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Total</span>
+                        <span id="checkoutTotal" style="color: var(--primary);">$0.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-3 small text-muted">
+                    <p class="mb-2"><i class="fas fa-lock me-2"></i>Your payment is secure and encrypted</p>
+                    <p class="mb-0"><i class="fas fa-undo me-2"></i>30-day return policy</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary btn-lg" id="placeOrderBtn">
+              <i class="fas fa-check me-2"></i>Place Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Order Confirmation Modal -->
+    <div class="modal fade" id="orderConfirmModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: var(--primary); color: white;">
+            <h5 class="modal-title"><i class="fas fa-check-circle me-2"></i>Order Confirmed!</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center py-4">
+            <div class="mb-4">
+              <i class="fas fa-check-circle fa-5x" style="color: var(--primary);"></i>
+            </div>
+            <h4 class="mb-3">Thank You for Your Order!</h4>
+            <p class="text-muted mb-4">Your order has been successfully placed.</p>
+            <div class="card bg-light mb-4">
+              <div class="card-body">
+                <div class="row text-start">
+                  <div class="col-6 mb-2">
+                    <small class="text-muted">Order Number</small>
+                    <div class="fw-bold" id="confirmOrderNumber">-</div>
+                  </div>
+                  <div class="col-6 mb-2">
+                    <small class="text-muted">Total Amount</small>
+                    <div class="fw-bold" id="confirmTotal">-</div>
+                  </div>
+                </div>
+                <div class="text-start mt-2">
+                  <small class="text-muted">Confirmation sent to</small>
+                  <div class="fw-bold" id="confirmEmail">-</div>
+                </div>
+                <hr>
+                <div class="text-start">
+                  <small class="text-muted">Items</small>
+                  <div id="confirmItems" class="small mt-1"></div>
+                </div>
+              </div>
+            </div>
+            <p class="small text-muted">You will receive an email confirmation shortly with tracking information.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <a href="products.html" class="btn btn-outline-primary">Continue Shopping</a>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      // Add to cart functionality for products page
+      document.addEventListener('click', (e) => {
+        if (e.target && e.target.matches('.add-to-cart-product')) {
+          const btn = e.target;
+          const product = {
+            id: btn.getAttribute('data-id'),
+            name: btn.getAttribute('data-name'),
+            price: parseFloat(btn.getAttribute('data-price')),
+            qty: 1,
+            image: btn.getAttribute('data-image')
+          };
+          
+          // Use the addToCart function from app.js
+          if (typeof addToCart === 'function') {
+            addToCart(product);
+            
+            // Visual feedback
+            btn.textContent = 'Added!';
+            btn.classList.add('btn-success');
+            btn.classList.remove('btn-primary');
+            setTimeout(() => {
+              btn.textContent = 'Add to Cart';
+              btn.classList.remove('btn-success');
+              btn.classList.add('btn-primary');
+            }, 1000);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
