@@ -1,7 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'>
-  <rect width='120' height='80' rx='8' fill='#f1f8e9'/>
-  <g transform='translate(12,10)'>
-    <rect width='96' height='60' rx='6' fill='#dcedc8'/>
-    <text x='48' y='36' font-family='Arial' font-size='10' fill='#558b2f' text-anchor='middle'>Sample Bundle</text>
-  </g>
-</svg>

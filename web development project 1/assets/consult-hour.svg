@@ -1,7 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'>
-  <rect width='120' height='80' rx='8' fill='#fffde7'/>
-  <g transform='translate(12,10)'>
-    <rect width='96' height='60' rx='6' fill='#fff9c4'/>
-    <text x='48' y='36' font-family='Arial' font-size='10' fill='#f57f17' text-anchor='middle'>Consult Hour</text>
-  </g>
-</svg>
