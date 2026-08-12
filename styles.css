@@ -1,0 +1,81 @@
+/* Additional styles for EarthArmor Packaging */
+
+.container .section-title {
+  margin-top: 20px;
+}
+
+.supplier-card { transition: opacity 0.2s ease-in-out; }
+
+@media (max-width: 768px) {
+  .hero-section { padding: 60px 0; }
+}
+
+/* Cart and mini-cart styles */
+.dropdown-menu#miniCartPreview, .dropdown-menu[aria-labelledby="miniCartDropdown"] {
+  min-width: 320px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.mini-cart-item { display:flex; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid #eee; }
+.mini-cart-item img { width:46px; height:46px; object-fit:cover; border-radius:6px; }
+.mini-cart-item .meta { flex:1; }
+.mini-cart-item .meta .title { font-size:0.95rem; font-weight:600; color:#222; }
+.mini-cart-item .meta .qty { font-size:0.85rem; color:#666; }
+
+.offcanvas .cart-item-row { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px dashed #f0f0f0; }
+.offcanvas .cart-item-row img { width:64px; height:64px; object-fit:cover; border-radius:6px; }
+.offcanvas .cart-item-row .info { flex:1; }
+.offcanvas .cart-total { font-size:1.2rem; font-weight:700; color:var(--primary); }
+
+.btn-primary { background-color: var(--primary); border-color: var(--primary); }
+.btn-secondary { background-color:#f5f5f5; border-color:#ddd; color:#222; }
+
+/* Live Chat Widget Styles */
+#chatWidget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+#chatWidget .card {
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+#chatWidget .card-header {
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+#chatBody {
+  height: 220px;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+#chatMessages {
+  padding: 10px;
+}
+
+.cart-item-row {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-row img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-row .info {
+  flex: 1;
+}
+
